@@ -1,27 +1,21 @@
 package mypack;
-import java.util.Scanner;
 
 public class Student {
     String name;
     int rollNo;
-    int seriesMark;
+    int oopMarks;
 
-    // Method to read student details
-    public void readDetails() {
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter name: ");
-        name = sc.nextLine();
-        System.out.print("Enter roll number: ");
-        rollNo = sc.nextInt();
-        System.out.print("Enter series mark: ");
-        seriesMark = sc.nextInt();
+    // Constructor
+    public Student(String name, int rollNo, int oopMarks) {
+        this.name = name;
+        this.rollNo = rollNo;
+        this.oopMarks = oopMarks;
     }
 
-    // Method to display details
-    public void displayDetails() {
-        System.out.println("Name: " + name);
-        System.out.println("Roll No: " + rollNo);
-        System.out.println("Series Mark: " + seriesMark);
-        System.out.println("---------------------------");
+    // Method to display student details
+    public void show() {
+        System.out.println("Name: " + name +
+                           " | Roll No: " + rollNo +
+                           " | OOP Marks: " + oopMarks);
     }
 }
